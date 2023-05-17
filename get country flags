@@ -1,0 +1,9 @@
+function printData() {
+    const flags = JSON.parse(this.responseText);
+    flags.forEach((f) => console.log(f.flags.png));
+  }
+  
+  var request = new XMLHttpRequest();
+  request.addEventListener("load", printData);
+  request.open("GET", "https://restcountries.com/v3.1/all");
+  request.send();
