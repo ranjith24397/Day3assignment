@@ -1,0 +1,16 @@
+let a = {
+    "Name": "Vijay",
+    "Age": "5"
+};
+
+let b = {
+    "Age":"5",
+    "Name": "Vijay"
+};
+let str1 = JSON.stringify(a, Object.keys(a).sort());
+let str2 = JSON.stringify(b, Object.keys(b).sort());
+
+// Compare the strings
+let areEqual = str1 === str2;
+
+console.log(areEqual);
